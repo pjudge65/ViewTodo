@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import WeeklyDayView from './WeeklyDayView';
 import AddToDo from './AddToDo';
 
-export default function WeeklyView({dates, todos, setTodos, loadTodos, createTodo, projects, wklyPopupOpen, setWklyPopup}) {
+export default function WeeklyView({dates, weekNav, setWeekNav, todos, setTodos, loadTodos, createTodo, projects, wklyPopupOpen, setWklyPopup}) {
 
   let navigate = useNavigate();
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -25,19 +25,22 @@ export default function WeeklyView({dates, todos, setTodos, loadTodos, createTod
     });
   }
 
+
   return (
     <div>
       <div id="weekly-header">
         {/* The title of the app and the informative popup button */}
-        <h1>VieuxTodo</h1>
+        <h1>ViewTodo</h1>
         <button type="button" className="button" id="weekly-popup-btn" onClick={()=>setWklyPopup(open=> !open)}>?</button>
       </div>
 
       {/* Displays the todo information for each of the given days */}
       <div id="weekly-view-container">
+          <button id="week-nav-left" onClick={()=>setWeekNav(weekNav-1)}>&#60;</button>
           {dates.map((date, idx) => 
               <WeeklyDayView key={idx} date={date} displayDaily={displayDaily} todos={todos}/>
           )}
+          <button id="week-nav-right" onClick={()=>setWeekNav(weekNav+1)}>&#62;</button>
           {/* Weekly view contains an add to-do button as well */}
           <AddToDo todos={todos} setTodos={setTodos} loadTodos={loadTodos} date={todaysDate} createTodo={createTodo} projects={projects}/>
 

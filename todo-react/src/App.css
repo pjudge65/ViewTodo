@@ -32,6 +32,30 @@ button{
     flex-direction: row;
     border: 1px solid #6b0606;
 }
+#week-nav-left{
+    position: absolute;
+    top: 45%;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+
+}
+#week-nav-left:hover{
+    background-color: #2A2A2A;
+    cursor: pointer;
+}
+#week-nav-right{
+    position: absolute;
+    top: 45%;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    
+}
+#week-nav-right:hover{
+    background-color: #2A2A2A;
+    cursor: pointer;
+}
 #weekly-header{
     
     position: relative;

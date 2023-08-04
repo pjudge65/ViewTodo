@@ -14,6 +14,7 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [activeProject, setActiveProject] = useState("Inbox");
   const [daysOfWeek, setDaysOfWeek] = useState([]);
+  const [weekNav, setWeekNav] = useState(0);
   const [undoRedoActions, setUndoRedo] = useState([]);
   const [redoActions, setRedoActs] = useState([]);
   const [wklyPopupOpen, setWklyPopup] = useState(true);
@@ -27,12 +28,17 @@ function App() {
     populateDates();
   }, [])
 
+  useEffect(()=>{
+    populateDates();
+  }, [weekNav])
+
 
 
 
   // Populates an array of this week's dates Monday through Sunday
   const populateDates = function(){
     let today = new Date();
+    today.setDate(today.getDate()+(weekNav*7))
     let todaysDay = today.getDay();
     if (todaysDay === 0) todaysDay = 7;
     let dayDiff = todaysDay - 1;
@@ -146,6 +152,8 @@ function App() {
         {/* Weekly View loads on default or on route to "/" */}
         <Route path="/" exact element={<WeeklyView 
                                           dates={daysOfWeek} 
+                                          weekNav={weekNav}
+                                          setWeekNav={setWeekNav}
                                           todos={todos} 
                                           setTodos={setTodos} 
                                           loadTodos={loadTodos}
