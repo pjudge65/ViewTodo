@@ -1,5 +1,5 @@
 import React from 'react'
-import AddToDo from './AddToDo'
+import AddToDo from '../Utils/AddToDo'
 import TodoItem from './ToDoItem'
 
 export default function ToDoDisplay({todos, setTodos, loadTodos, onDeleteTodo, date, undoRedoActions, setUndoRedo, createTodo, projects, activeProject, setActiveProject}) {

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import ToDoDisplay from './ToDoDisplay';
 import Sidebar from './Sidebar';
 import MainDailyContainer from './MainDailyContainer';
@@ -7,22 +7,47 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
 
-export default function DailyView({todos, setTodos, loadTodos, onDeleteTodo, projects, activeProject, setActiveProject, createProject, undoRedoActions, setUndoRedo, redoActions, setRedoActs, createTodo, dailyPopupOpen, setDailyPopup}) {
+export default function DailyView({todos, setTodos, loadTodos, weekNav, setWeekNav, onDeleteTodo, projects, activeProject, setActiveProject, createProject, undoRedoActions, setUndoRedo, redoActions, setRedoActs, createTodo, dailyPopupOpen, setDailyPopup}) {
     // 
     // The Main container for all Daily View components
     // 
 
     // takes the date that is clicked on "WeeklyView" and saves it for use in daily view
     const location = useLocation();
-    const date  = location.state.date;
+    const [date, changeDate] = useState(location.state.date)
+    console.log(location)
+    // const date  = location.state.date;
 
     // controls whether the informative popup is displayed or not
     const closePopup = () => setDailyPopup(false);
+
+    const decDate = function(e){
+        e.preventDefault();
+        let new_date = new Date(date)
+        new_date.setDate(new_date.getDate()-1);
+        if (new_date.getDay()===0){
+            setWeekNav(weekNav-1)
+        }
+
+        changeDate(new_date);
+    }
+
+    const incDate = function(e){
+        e.preventDefault();
+        let new_date = new Date(date);
+        new_date.setDate(new_date.getDate()+1);
+        if (new_date.getDay()===1){
+            setWeekNav(weekNav+1)
+        }
+        changeDate(new_date);
+    }
 
     
     return (
         <div id="container">
             {/* Contains Projects as well as Return/Import */}
+            <button id="day-nav-left" onClick={decDate}>&#60;</button>
+            <button id="day-nav-right" onClick={incDate}>&#62;</button>
             <Sidebar 
                 todos={todos} 
                 loadTodos={loadTodos} 

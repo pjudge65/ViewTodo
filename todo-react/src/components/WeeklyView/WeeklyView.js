@@ -3,7 +3,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { useNavigate } from "react-router-dom";
 import WeeklyDayView from './WeeklyDayView';
-import AddToDo from './AddToDo';
+import AddToDo from '../Utils/AddToDo';
 
 export default function WeeklyView({dates, weekNav, setWeekNav, todos, setTodos, loadTodos, createTodo, projects, wklyPopupOpen, setWklyPopup}) {
 

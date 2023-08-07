@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import { useNavigate } from "react-router-dom";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import AddProject from './AddProject';
+import AddProject from '../Utils/AddProject';
 import ImportResultForm from './ImportResultForm';
 
 export default function ReturnImport({todos, setTodos, loadTodos, onDeleteTodo, projects, activeProject, setActiveProject, createProject, date, undoRedoActions, setUndoRedo, setRedoActs}) {

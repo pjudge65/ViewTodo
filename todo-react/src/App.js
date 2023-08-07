@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import DailyView from "./components/DailyView";
-import WeeklyView from './components/WeeklyView';
+import DailyView from "./components/DailyView/DailyView";
+import WeeklyView from './components/WeeklyView/WeeklyView';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -169,6 +169,8 @@ function App() {
                                               todos={todos} 
                                               setTodos={setTodos} 
                                               loadTodos={loadTodos} 
+                                              weekNav={weekNav}
+                                              setWeekNav={setWeekNav}
                                               onDeleteTodo={onDeleteTodo}
                                               projects={projects}
                                               activeProject={activeProject}

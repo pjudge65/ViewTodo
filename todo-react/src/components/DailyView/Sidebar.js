@@ -1,5 +1,5 @@
 import React from 'react';
-import AddProject from './AddProject';
+import AddProject from '../Utils/AddProject';
 import ProjectDisplay from './ProjectDisplay';
 import ReturnImport from './ReturnImport';
 
