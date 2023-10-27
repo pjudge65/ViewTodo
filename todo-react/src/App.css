@@ -1,345 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Sono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Sono&display=swap");
 
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 
 /* ~~~~~~~~~font settings~~~~~~~~~~~~~~ */
-h1, h2, h3, h4, h5, a, p, label{
-    font-family: 'Sono', sans-serif;
-    color: #f2eded;
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p,
+label {
+  font-family: "Sono", sans-serif;
+  color: #f2eded;
 }
-button{
-    background-color: #3A3A3A;
-    color: #f2eded;
-
-}
-
-/*~~~~~~~~ Weekly View Settings~~~~~~~~~ */
-.weeklyDay{
-    min-height: 700px;
-    border: 2px solid #6b0606;
-    width: 100%;
-    background-color: #3A3A3A;
-}
-.weeklyDay:hover{
-    background-color: #2A2A2A;
-    cursor: pointer;
-}
-
-#weekly-view-container{
-    display: flex;
-    flex-direction: row;
-    border: 1px solid #6b0606;
-}
-#week-nav-left{
-    position: absolute;
-    top: 45%;
-    left: 30px;
-    width: 45px;
-    height: 45px;
-
-}
-#week-nav-left:hover{
-    background-color: #2A2A2A;
-    cursor: pointer;
-}
-#week-nav-right{
-    position: absolute;
-    top: 45%;
-    right: 30px;
-    width: 45px;
-    height: 45px;
-    
-}
-#week-nav-right:hover{
-    background-color: #2A2A2A;
-    cursor: pointer;
-}
-#day-nav-left{
-    position: absolute;
-    top: 45%;
-    left: 30px;
-    width: 45px;
-    height: 45px;
-}
-#day-nav-right{
-    position: absolute;
-    top: 45%;
-    right: 30px;
-    width: 45px;
-    height: 45px;
-}
-#weekly-header{
-    
-    position: relative;
-    text-align: center;
-}
-#weekly-header>h1{
-    color: #a10b0b;
-    font-family: 'Rubik ISO', cursive;
-    font-size: 55px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-#weekly-popup-btn{
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    height: 30px;
-    width: 30px;
-    font-size: 20px;
-}
-
-.weeklyDay>h4{
-    margin-top:5px;
-    margin-bottom: 5px;
-}
-.weeklyDay>h1{
-    margin: 0;
-    font-size: 35px;
-    border-bottom: 3px solid #6b0606;
-}
-
-/* ~~~~~~~~~~Daily View Setting~~~~~~~~~~~~ */
-#daily-popup-btn{
-    position:absolute;
-    left: 15px;
-    top: 15px;
-    height: 30px;
-    width: 30px;
-    font-size: 20px;
-}
-
-#container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-right: 20%;
-    padding-top: 0;
-    margin-left: 20%;
-    min-width: 1000px;
-    padding-bottom: 20px;
-
-}
-#sidebar{
-    background-color: #3A3A3A;
-}
-#main-todo-container{
-    background-color: #3A3A3A;
-    border: 1px solid #6b0606;
-}
-#top-left{
-    min-height: 80px;
-}
-
-
-/* ~~~~~~~~~~Return Import Settings~~~~~~~~~~ */
-#return-import-div{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    min-height: 40px;
-    border: 1px solid #6b0606;
-
-}
-#back-button{
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    white-space: normal;
-
-}
-#import-button{
-    height: 40px;
-    font-size: 20px;
-}
-#import-button-div{
-    position: absolute;
-    right: 0;
-}
-#import-result-form{
-    display: flex;
-    flex-direction: column;
-
-
-}
-#import-result-form > input[type=submit]{
-    font-family: 'Sono', sans-serif;
-    text-align: center;
-    width: 25%;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #2A2A2A;
-    color: #f2eded;
-}
-#import-result-form > :not(.importResult){
-    text-align: center;
+button {
+  background-color: #3a3a3a;
+  color: #f2eded;
 }
 
 /* ~~~~~~~~~~Popup Settings~~~~~~~~~~~~~~ */
-.popup-content{
-    width: 35%;
-    border: 2px solid #6b0606;
-
-    background-color: #3A3A3A;
+.popup-content {
+  width: 35%;
+  border: 2px solid #6b0606;
+  background-color: #3a3a3a;
 }
-.todoFormPopup-content{
-    width: 20%;
-}
-
-
-.importResult{
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid black;
-    
-    border-radius: 15px;
-}
-.importResultData>p{
-    margin: 5px;
+.todoFormPopup-content {
+  width: 20%;
 }
 
-/* ~~~~~~~~~~~~~~ PROJECT SETTINGS ~~~~~~~~~~~~~~ */
-#project-header {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    border: 2px solid #6b0606;
+.importResult {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
 
+  border-radius: 15px;
 }
-#add-project-div {
-    min-height: 40px;
-
-    position: relative;
+.importResultData > p {
+  margin: 5px;
 }
 
 
-#add-project-button{
-    font-size: 25px;
-    height: 40px;
-    width: 40px;
-}
-
-#header {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    border: 2px solid #6b0606;
-    width: 700px;
-    margin-right: auto;
-    min-height: 80px;
-}
-
-/* ~~~~~~~~~~~~~~ UNDO REDO SETTINGS ~~~~~~~~~~~~~~ */
-#undo-redo{
-    position: absolute;
-    right:0;
-    bottom:0;
-}
-#project-display{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 650px;
-    border: 2px solid #6b0606;
-
-}
-.project-item{
-    padding-top: 15px;
-
-}
-.project-display-item{
-    padding: 10px;
-
-}
-
-#project-display>h4{
-    border-top: 2px solid #2A2A2A;
-    border-bottom: 2px solid #2A2A2A;
-    margin:15px;
-    padding: 10px;
-    text-align: center;
-}
 
 
-#todo-display-container{
-    position: relative;
-    min-height: 650px;
-    border: 2px solid #6b0606;
-}
-
-/* ~~~~~~~~~~~~~~ ADD TODO FORM SETTINGS ~~~~~~~~~~~~~~ */
-#add-todo-button{
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-
-}
-#add-td-btn{
-    height: 50px;
-    width: 50px;
-    font-size: 35px;
-}
-
-#add-todo-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#add-todo-form label{
-    text-align: center;
-    font-size: 20px;
-    font-weight: bolder;
-
-}
-
-#add-todo-form input,select {
-    display: block;
-    margin-bottom: 10px;
-    font-family: 'Sono', sans-serif;
-    font-size: 15px;
-
-    background-color: #2A2A2A;
-    color: #f2eded;
-    margin-bottom: 15px;
-
-}
 /* ~~~~~~~~~~~~~~ TOOLTIP SETTINGS ~~~~~~~~~~~~~~ */
-.projectPopup-content{
-    width: 25%;
+.projectPopup-content {
+  width: 25%;
 }
-.tooltipPopup-content{
-    font-family: 'Sono', sans-serif;
-    color: #f2eded;
-    background-color: #2A2A2A;
+.tooltipPopup-content {
+  font-family: "Sono", sans-serif;
+  color: #f2eded;
+  background-color: #2a2a2a;
 }
-#add-project-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#add-project-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#add-project-form input{
-    display: block;
-    font-family: 'Sono', sans-serif;
-    font-size: 15px;
-    margin-bottom: 15px;
+#add-project-form input {
+  display: block;
+  font-family: "Sono", sans-serif;
+  font-size: 15px;
+  margin-bottom: 15px;
 
-    background-color: #2A2A2A;
-    color: #f2eded;
-}
-
-.todo-item>h4 {
-    display: inline-block;
+  background-color: #2a2a2a;
+  color: #f2eded;
 }
 
-.todo-notes-vanish{
-    display: none;
+.todo-item > h4 {
+  display: inline-block;
 }
 
+.todo-notes-vanish {
+  display: none;
+}

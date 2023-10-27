@@ -4,6 +4,7 @@ import ToDoDisplay from "./TodoDisplay/ToDoDisplay";
 import Sidebar from "./Sidebar/Sidebar";
 import MainDailyContainer from "./TodoDisplay/MainDailyContainer";
 import Popup from "reactjs-popup";
+import "./DailyView.css";
 import "reactjs-popup/dist/index.css";
 
 export default function DailyView({

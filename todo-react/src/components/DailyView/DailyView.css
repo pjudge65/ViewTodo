@@ -1,0 +1,141 @@
+#daily-popup-btn{
+  position:absolute;
+  left: 15px;
+  top: 15px;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 20%;
+  padding-top: 0;
+  margin-left: 20%;
+  min-width: 1000px;
+  padding-bottom: 20px;
+
+}
+#sidebar{
+  background-color: #3A3A3A;
+}
+#main-todo-container{
+  background-color: #3A3A3A;
+  border: 1px solid #6b0606;
+}
+#top-left{
+  min-height: 80px;
+}
+
+
+/* ~~~~~~~~~~Return Import Settings~~~~~~~~~~ */
+#return-import-div{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  min-height: 40px;
+  border: 1px solid #6b0606;
+
+}
+#back-button{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  white-space: normal;
+
+}
+#import-button{
+  height: 40px;
+  font-size: 20px;
+}
+#import-button-div{
+  position: absolute;
+  right: 0;
+}
+#import-result-form{
+  display: flex;
+  flex-direction: column;
+
+
+}
+#import-result-form > input[type=submit]{
+  font-family: 'Sono', sans-serif;
+  text-align: center;
+  width: 25%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2A2A2A;
+  color: #f2eded;
+}
+#import-result-form > :not(.importResult){
+  text-align: center;
+}
+
+/* ~~~~~~~~~~~~~~ PROJECT SETTINGS ~~~~~~~~~~~~~~ */
+#project-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #6b0606;
+}
+#add-project-div {
+  min-height: 40px;
+
+  position: relative;
+}
+
+#add-project-button {
+  font-size: 25px;
+  height: 40px;
+  width: 40px;
+}
+
+#header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  border: 2px solid #6b0606;
+  width: 700px;
+  margin-right: auto;
+  min-height: 80px;
+}
+
+/* ~~~~~~~~~~~~~~ UNDO REDO SETTINGS ~~~~~~~~~~~~~~ */
+#undo-redo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#project-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 650px;
+  border: 2px solid #6b0606;
+}
+.project-item {
+  padding-top: 15px;
+}
+.project-display-item {
+  padding: 10px;
+}
+
+#project-display > h4 {
+  border-top: 2px solid #2a2a2a;
+  border-bottom: 2px solid #2a2a2a;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+#todo-display-container {
+  position: relative;
+  min-height: 650px;
+  border: 2px solid #6b0606;
+}
