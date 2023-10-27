@@ -1,71 +1,108 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Sono&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@600&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Yomogi&display=swap");
+
 /*~~~~~~~~ Weekly View Settings~~~~~~~~~ */
-.weeklyDay{
+.weeklyDay {
   min-height: 700px;
-  border: 2px solid #6b0606;
+  /* border: 2px solid #6b0606; */
+  border: 1px solid black;
   width: 100%;
-  background-color: #3A3A3A;
+  /* background-color: #3A3A3A; */
+  /* background: #f0ead6; */
+  /* background: #e0dac6 */
+  background-color: #d0cab6;
+  overflow: hidden;
+
+  
 }
-.weeklyDay:hover{
-  background-color: #2A2A2A;
+.weekly-todo-display {
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #f0ead6,
+    #f0ead6 90%,
+    #e0dac6 10%,
+    #d0dac6
+  );
+  background-size: 100% 8px;
+}
+.weekly-todo-display h4 {
+  margin: 0px;
+  padding-top: 5px;
+}
+
+.weeklyDay:hover {
+  background: #cccccc;
+  cursor: pointer;
+}
+.weeklyDay:hover .weekly-todo-display{
+  background: linear-gradient(
+    to bottom,
+    #cccccc,
+    #cccccc 90%,
+    #bbbbbb 10%,
+    #bbbbbb
+  );
+  background-size: 100% 8px;
   cursor: pointer;
 }
 
-#weekly-view-container{
+#weekly-view-container {
   display: flex;
   flex-direction: row;
-  border: 1px solid #6b0606;
-}
-#week-nav-left{
-  position: absolute;
-  top: 45%;
-  left: 30px;
-  width: 45px;
-  height: 45px;
+  border: 1px solid black;
 
 }
-#week-nav-left:hover{
-  background-color: #2A2A2A;
-  cursor: pointer;
-}
-#week-nav-right{
-  position: absolute;
-  top: 45%;
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  
-}
-#week-nav-right:hover{
-  background-color: #2A2A2A;
-  cursor: pointer;
-}
-#day-nav-left{
+#week-nav-left {
   position: absolute;
   top: 45%;
   left: 30px;
   width: 45px;
   height: 45px;
 }
-#day-nav-right{
+#week-nav-left:hover {
+  background-color: #2a2a2a;
+  cursor: pointer;
+}
+#week-nav-right {
   position: absolute;
   top: 45%;
   right: 30px;
   width: 45px;
   height: 45px;
 }
-#weekly-header{
-  
+#week-nav-right:hover {
+  background-color: #2a2a2a;
+  cursor: pointer;
+}
+#day-nav-left {
+  position: absolute;
+  top: 45%;
+  left: 30px;
+  width: 45px;
+  height: 45px;
+}
+#day-nav-right {
+  position: absolute;
+  top: 45%;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+}
+#weekly-header {
   position: relative;
   text-align: center;
 }
-#weekly-header>h1{
-  color: #a10b0b;
-  font-family: 'Rubik ISO', cursive;
+#weekly-header > h1 {
+  color: black;
+  font-family: "Yomogi", cursive;
+  font-weight: 350;
   font-size: 55px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#weekly-popup-btn{
+#weekly-popup-btn {
   position: absolute;
   left: 15px;
   top: 15px;
@@ -74,12 +111,20 @@
   font-size: 20px;
 }
 
-.weeklyDay>h4{
-  margin-top:5px;
+.weeklyDay > h4 {
+  margin-top: 5px;
   margin-bottom: 5px;
 }
-.weeklyDay>h1{
+.weeklyDay > h1 {
   margin: 0;
   font-size: 35px;
-  border-bottom: 3px solid #6b0606;
+  border-bottom: 3px solid black;
+}
+#weekly-view-footer {
+  position: relative;
+  display: block;
+  margin-top: 75px;
+  bottom: 5px;
+  color: #444444;
+  font-size: 1rem;
 }

@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Sono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 body {
-  background-color: black;
+  /* background-color: #f0ead6; */
+  background-color: #f0ead6;
+  background-color: #f7f4ea
 }
 
 /* ~~~~~~~~~font settings~~~~~~~~~~~~~~ */
@@ -13,8 +15,8 @@ h5,
 a,
 p,
 label {
-  font-family: "Sono", sans-serif;
-  color: #f2eded;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 button {
   background-color: #3a3a3a;

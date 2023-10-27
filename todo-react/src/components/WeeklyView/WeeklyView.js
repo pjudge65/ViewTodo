@@ -103,6 +103,8 @@ export default function WeeklyView({
           <h4>Click on any day of the week to continue</h4>
         </div>
       </Popup>
+      <a id="weekly-view-footer" href="https://www.flaticon.com/free-icons/create" title="create icons">Create icons created by Ilham Fitrotul Hayat - Flaticon</a>
+      {/* <footer >blah</footer> */}
     </div>
   );
 }

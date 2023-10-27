@@ -5,7 +5,9 @@ export default function WeeklyDayView({date, displayDaily, todos}) {
 
 	// uses this list against getDay() to populate weekday names
 	const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	const months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
 	let day = days[date.getDay()];
+	let month = months[date.getMonth()];
 
 	// filters todos by day on the weekly view
 	const filterFunction = function(value, index, array){
@@ -24,8 +26,8 @@ export default function WeeklyDayView({date, displayDaily, todos}) {
 		// displays the date as well as the todos for that date
 		<div className="weeklyDay" id="monday-weekly" onClick={handleClick}>
 			<h4>{day}</h4>
-			<h1>{date.toLocaleDateString()}</h1>
-			<div id="weekly-todo-display">
+			<h1>{`${month} ${date.getDate()}`}</h1>
+			<div className="weekly-todo-display">
 				{todos.filter(filterFunction).map(todo => {
 					return <WeeklyTodoItem key={todo._id} todo={todo} />
 				})}
