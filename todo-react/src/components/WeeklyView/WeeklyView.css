@@ -12,9 +12,9 @@
   /* background: #f0ead6; */
   /* background: #e0dac6 */
   background-color: #d0cab6;
+  background-image: url(../../imgs/45-degree-fabric-dark.png);
+  background-color: #d0cab6;
   overflow: hidden;
-
-  
 }
 .weekly-todo-display {
   height: 100%;
@@ -33,10 +33,11 @@
 }
 
 .weeklyDay:hover {
-  background: #cccccc;
+  background-image: url(../../imgs/45-degree-fabric-dark.png);
+  background-color: #cccccc;
   cursor: pointer;
 }
-.weeklyDay:hover .weekly-todo-display{
+.weeklyDay:hover .weekly-todo-display {
   background: linear-gradient(
     to bottom,
     #cccccc,
@@ -49,32 +50,54 @@
 }
 
 #weekly-view-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   border: 1px solid black;
-
 }
+
 #week-nav-left {
   position: absolute;
   top: 45%;
-  left: 30px;
-  width: 45px;
-  height: 45px;
+  left: 0px;
+  justify-content: start;
+  width: 25px;
+  height: 75px;
+  border: none;
+  opacity: 0.5;
+  font-size: 1.25rem;
+  box-shadow: 1.5px 1.5px 2px grey;
 }
 #week-nav-left:hover {
-  background-color: #2a2a2a;
+  background-color: #cccccc;
   cursor: pointer;
+  border: 1px solid black;
+  opacity: 0.8;
 }
+
 #week-nav-right {
   position: absolute;
+  /* position: relative; */
   top: 45%;
-  right: 30px;
-  width: 45px;
-  height: 45px;
+  /* right: 30px; */
+  right: 0px;
+  justify-content: right;
+  width: 25px;
+  height: 75px;
+  border: none;
+  opacity: 0.5;
+  font-size: 1.25rem;
+  box-shadow: -1.5px 1.5px 2px grey;
 }
-#week-nav-right:hover {
+/* #week-nav-right:hover {
   background-color: #2a2a2a;
   cursor: pointer;
+} */
+#week-nav-right:hover {
+  background-color: #cccccc;
+  cursor: pointer;
+  border: 1px solid black;
+  opacity: 0.8;
 }
 #day-nav-left {
   position: absolute;

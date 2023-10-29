@@ -2,7 +2,7 @@
 
 body {
   /* background-color: #f0ead6; */
-  background-color: #f0ead6;
+  /* background-color: #f0ead6; */
   background-color: #f7f4ea
 }
 
@@ -18,11 +18,36 @@ label {
   font-family: "Montserrat", sans-serif;
   color: black;
 }
-button {
+
+/* ~~~~~~~~Button styles~~~~~~~~~~~~~~~~~ */
+/* button {
   background-color: #3a3a3a;
   color: #f2eded;
+} */
+button {
+  background-color: #f0ead6
 }
+.sidebar-button {
+  background-color: #d0cab6;
+  background-image: url(./imgs/45-degree-fabric-dark.png);
+  border: 1px solid black;
+  box-shadow: 1px 1px 3px black;
+  transition: transform 150ms ease,
+              background-color 250ms ease-in-out;
 
+
+}
+.sidebar-button:hover {
+  background-color: #b0aa96;
+
+  /* box-shadow: .5px .5px; */
+  /* border: 1px dashed black;
+  box-shadow: 1px 1px 1px black; */
+}
+.sidebar-button:active {
+  transform: scale(.98);
+  box-shadow: none;
+}
 /* ~~~~~~~~~~Popup Settings~~~~~~~~~~~~~~ */
 .popup-content {
   width: 35%;

@@ -13,22 +13,42 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  margin-right: 20%;
-  padding-top: 0;
-  margin-left: 20%;
-  min-width: 1000px;
-  padding-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 75px;
+  padding-top: 0px;
+
+
+  /* width: 5rem; */
+  /* padding-bottom: 20px; */
 
 }
 #sidebar{
-  background-color: #3A3A3A;
+  /* background-color: #3A3A3A; */
+  background-image: url(../../imgs/45-degree-fabric-dark.png);
+  background-color: #d0cab6;
 }
 #main-todo-container{
-  background-color: #3A3A3A;
+  /* background-color: #3A3A3A; */
+  background-color: #f0ead6;
   border: 1px solid #6b0606;
 }
 #top-left{
   min-height: 80px;
+}
+#todo-display-container {
+  position: relative;
+  min-height: 650px;
+  border: 2px solid #6b0606;
+
+  background: linear-gradient(
+    to bottom,
+    #f0ead6,
+    #f0ead6 90%,
+    #e0dac6 10%,
+    #d0dac6
+  );
+  background-size: 100% 8px;
 }
 
 
@@ -97,10 +117,13 @@
 }
 
 #header {
+  background-color: #d0cab6;
+  background-image: url(../../imgs/45-degree-fabric-dark.png);
   display: flex;
   position: relative;
   flex-direction: row;
-  border: 2px solid #6b0606;
+  /* border: 2px solid #6b0606; */
+  border: 2px solid grey;
   width: 700px;
   margin-right: auto;
   min-height: 80px;
@@ -134,8 +157,3 @@
   text-align: center;
 }
 
-#todo-display-container {
-  position: relative;
-  min-height: 650px;
-  border: 2px solid #6b0606;
-}

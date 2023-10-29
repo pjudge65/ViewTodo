@@ -157,7 +157,7 @@ export default function ReturnImport({
         <div id="back-button-div" type="button" className="popup-cont">
           <Popup
             trigger={
-              <button id="back-button" onClick={displayWeekly}>
+              <button id="back-button" className="sidebar-button" onClick={displayWeekly}>
                 &#60;
               </button>
             }
@@ -179,7 +179,7 @@ export default function ReturnImport({
               <button
                 id="import-button"
                 type="button"
-                className="button"
+                className="sidebar-button"
                 onClick={() => setOpenImport((open) => !open)}
               >
                 Import

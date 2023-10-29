@@ -33,7 +33,7 @@ export default function AddProject({projects, activeProject, setActiveProject, c
         <Popup
           trigger={
             // Click this to display add-project form
-            <button id="add-project-button" type="button" className="button" onClick={()=>setOpen(open=> !open)}>+</button>
+            <button id="add-project-button" type="button" className="sidebar-button" onClick={()=>setOpen(open=> !open)}>+</button>
           }
           position={'right top'}
           on={['hover']}
